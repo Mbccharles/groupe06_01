@@ -1,0 +1,20 @@
+# Demander si la personne a de la fièvre.
+# - Si oui → demander si elle a des douleurs → "Consulter un médecin".
+# - Si non → demander si elle tousse → "Repos conseillé".
+# - Sinon → "Bonne santé".
+
+# Données
+fievre = input("Avez-vous de la fièvre? (oui/non) : ").lower()
+
+if fievre == "oui":
+    douleurs = input("Avez-vous des douleurs? (oui/non) : ").lower()
+    if douleurs == "oui":
+        print("Consulter un médecin.")
+    else:
+        print("Surveillez vos symptômes.")
+else:
+    toux = input("Avez-vous une toux ? (oui/non) : ").lower()
+    if toux == "oui":
+        print("Repos conseillé.")
+    else:
+        print("Bonne santé ! ")
