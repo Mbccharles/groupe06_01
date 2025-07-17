@@ -1,0 +1,11 @@
+# Exercice 5 — Générateur de mot de passe
+import random
+import string
+
+def generer_mdp(longueur):
+    caracteres = string.ascii_letters + string.digits
+    mdp = ''.join(random.choice(caracteres) for _ in range(longueur))
+    return mdp
+
+longueur = int(input("Longueur du mot de passe: "))
+print(f"Mot de passe généré: {generer_mdp(longueur)}")
